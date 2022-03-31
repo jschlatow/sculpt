@@ -1,0 +1,13 @@
+<launcher pkg="usb_modem_drv">
+	<route>
+		<service name="Uplink">
+			<child name="nic_router"/>
+		</service>
+		<service name="Usb">
+			<parent/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+	</route>
+</launcher>

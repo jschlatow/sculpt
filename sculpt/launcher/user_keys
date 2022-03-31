@@ -1,0 +1,10 @@
+<launcher pkg="user_keys">
+	<route>
+		<service name="File_system" label="keyboard">
+			<child name="keyboard_fs"/>
+		</service>
+		<service name="Gui">
+			<parent/>
+		</service>
+	</route>
+</launcher>

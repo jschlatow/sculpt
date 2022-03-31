@@ -1,0 +1,19 @@
+<launcher pkg="mobile_network">
+	<route>
+		<service name="Usb">
+			<parent/>
+		</service>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+		<service name="File_system">
+			<child name="recall_fs"/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+		<service name="Report" label="state">
+			<parent/>
+		</service>
+	</route>
+</launcher>

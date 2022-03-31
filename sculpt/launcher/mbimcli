@@ -1,0 +1,26 @@
+<launcher pkg="mbimcli">
+	<route>
+		<service name="Terminal">
+			<child name="usb_modem_drv"/>
+		</service>
+		<service name="Report" label="nic_router.config">
+			<child name="config_fs_report" label="nic_router"/>
+		</service>
+		<service name="Report" label="state">
+			<parent/>
+		</service>
+	</route>
+	<config>
+		<network apn="internet" pin="0000"/>
+		<vfs>
+			<dir name="dev">
+				<log/>
+				<inline name="rtc">2020-08-05 00:01</inline>
+				<dir name="pipe"> <pipe/> </dir>
+				<terminal name="cdc-wdm0" raw="yes"/>
+			</dir>
+			<ram/>
+		</vfs>
+		<libc stdout="/dev/log" stderr="/dev/log" rtc="/dev/rtc" pipe="/dev/pipe"/>
+	</config>
+</launcher>

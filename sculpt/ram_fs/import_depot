@@ -1,0 +1,11 @@
+<config>
+	<vfs>
+		<ram/>
+		<import>
+			<dir name="depot">
+				<tar name="depot.tar"/>
+			</dir>
+		</import>
+	</vfs>
+	<default-policy root="/" writeable="yes"/>
+</config>

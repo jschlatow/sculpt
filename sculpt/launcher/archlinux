@@ -1,0 +1,64 @@
+<launcher pkg="vbox6">
+	<route>
+		<service name="Block" label_suffix=" -> 1">
+			<child name="nvme-0.part_block" label="1"/>
+		</service>
+		<service name="Block" label_suffix=" -> 4">
+			<child name="nvme-0.part_block" label="4"/>
+		</service>
+		<service name="Block" label_suffix=" -> 5">
+			<child name="nvme-0.part_block" label="5"/>
+		</service>
+		<service name="File_system" label="vm">
+			<child name="archlinux_vm_fs"/>
+		</service>
+		<service name="File_system" label="shared">
+			<child name="shared_fs"/>
+		</service>
+		<service name="File_system" label="depot">
+			<child name="depot_fs"/>
+		</service>
+		<service name="VM">
+			<parent/>
+		</service>
+		<service name="Audio_out">
+			<child name="black_hole"/>
+		</service>
+		<service name="Audio_in">
+			<child name="black_hole"/>
+		</service>
+		<service name="Gui">
+			<child name="wm"/>
+		</service>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+		<service name="ROM" label="capslock">
+			<parent label="capslock"/>
+		</service>
+		<service name="ROM" label="platform_info">
+			<parent label="platform_info"/>
+		</service>
+		<service name="Report" label_last="shape">
+			<parent/>
+		</service>
+		<service name="Report" label_last="clipboard">
+			<child name="wm"/>
+		</service>
+		<service name="ROM" label_last="clipboard">
+			<child name="wm"/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+		<service name="ROM" label="usb_devices">
+			<child name="usb_devices_rom"/>
+		</service>
+		<service name="Usb">
+			<parent/>
+		</service>
+	</route>
+</launcher>

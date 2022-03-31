@@ -1,0 +1,24 @@
+
+               ========================================
+               Custom configuration files for Sculpt OS
+               ========================================
+
+
+This repository hosts config files for building a customised Sculpt OS. Since
+the 22.02 release of the Genode OS Framework (https://genode.org), Sculpt is
+highly modularised and configurable. This repository hosts the config files for
+building a customised Sculpt OS that I like to use on a daily basis.
+
+To use it, you first need to obtain a clone of Genode:
+
+! git clone https://github.com/genodelabs/genode.git genode
+
+Now, clone the _sculpt.git_ repository to _genode/repos/sculpt_:
+
+! git clone https://github.com/jschlatow/sculpt.git genode/repos/sculpt
+
+Follow along the instructions for building a Sculpt image from the latest Sculpt
+documenation (https://genode.org/documentation/articles/index). Do not forget,
+though, to add the following line to your _etc/build.conf_:
+
+! REPOSITORIES += $(GENODE_DIR)/repos/sculpt
