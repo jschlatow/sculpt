@@ -32,3 +32,4 @@ _/src/vfs_pipe
 _/src/vim
 _/src/which
 _/src/zlib
+_/pkg/drivers_interactive-linux
