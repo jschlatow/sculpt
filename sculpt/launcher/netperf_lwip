@@ -1,0 +1,30 @@
+<launcher pkg="netperf">
+	<route>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+	</route>
+
+	<config>
+		<arg value="netserver"/>
+		<arg value="-D"/>
+		<arg value="-4"/>
+		<arg value="-f"/>
+		<libc stdout="/dev/log" stderr="/dev/log" rtc="/dev/rtc" socket="/socket"/>
+		<vfs>
+			<dir name="dev">
+				<log/> <rtc/>
+			</dir>
+			<dir name="socket">
+				<lwip dhcp="yes"/>
+			</dir>
+		</vfs>
+	</config>
+
+</launcher>

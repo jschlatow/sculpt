@@ -1,0 +1,33 @@
+<launcher pkg="trace_recorder">
+	<route>
+		<service name="File_system">
+			<child name="recall_fs"/>
+		</service>
+		<service name="TRACE">
+			<parent/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+		<service name="ROM" label="platform_info">
+			<parent label="platform_info"/>
+		</service>
+	</route>
+
+	<config period_ms="1000" enable="no">
+		<vfs> <fs label="target"/> </vfs>
+
+		<policy label_suffix="nic_router" thread="ep" policy="ctf_pcapng" buffer="8M">
+			<pcapng/>
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="netperf_lwip" thread="ep" policy="ctf_rpc_name" buffer="2M">
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="nic_drv" thread="ep" policy="ctf_rpc_name" buffer="2M">
+			<ctf/>
+		</policy>
+	</config>
+</launcher>
