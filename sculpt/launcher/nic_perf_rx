@@ -1,0 +1,10 @@
+<launcher pkg="nic_perf" priority="-1">
+	<affinity xpos="1" ypos="0" width="1" height="2"/>
+	<route>
+		<service name="Nic"> <child name="nic_router"/> </service>
+	</route>
+	<config period_ms="5000">
+		<nic-client/>
+	</config>
+</launcher>
+

@@ -1,0 +1,41 @@
+# configuration decisions
+drivers: pc
+system:  pc
+gpu_drv: intel
+
+# supplemental depot content added to the system image
+import: pkg/drivers_managed-pc pkg/wifi src/ipxe_nic_drv
+
+# selection of accepted depot-package providers
+depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
+depot: ssumpf skalk
+
+################
+# Customisation
+
+usb:          jschlatow
+event_filter: jschlatow
+nitpicker:    jschlatow
+deploy:       trace_recorder
+ram_fs:       import_depot
+nic_router:   netperf
+
+# selection of launcher-menu entries
+launcher: nic_perf_rx
+launcher: nic_perf_tx
+launcher: nic_router
+launcher: nic_drv
+launcher: udp_send
+launcher: udp_recv
+launcher: test-nic_perf
+launcher: test-udp_router
+launcher: test-nic_perf_drv
+launcher: test-nic_perf_router
+launcher: test-nic_perf_lwip_rx
+launcher: test-nic_perf_lwip_tx
+launcher: test-nic_perf_lxip_rx
+launcher: test-nic_perf_lxip_tx
+launcher: test-nic_perf_lwip_rx_router
+launcher: test-nic_perf_lwip_tx_router
+launcher: netperf_lwip netperf_lxip
+launcher: trace_recorder_nic_perf

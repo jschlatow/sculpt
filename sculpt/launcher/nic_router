@@ -1,0 +1,18 @@
+<launcher pkg="nic_router" priority="-1">
+	<affinity xpos="1" ypos="0" width="1" height="2"/>
+
+	<config verbose_packet_drop="yes" verbose_packets="no" verbose="no">
+		<policy label_suffix="nic_perf_tx -> " domain="sender"/>
+		<policy label_suffix="nic_perf_rx -> " domain="receiver"/>
+
+		<domain name="sender" interface="10.0.1.1/24">
+			<dhcp-server ip_first="10.0.1.2" ip_last="10.0.1.2"/>
+			<ip dst="0.0.0.0/0" domain="receiver"/>
+		</domain>
+
+		<domain name="receiver" interface="10.0.2.1/24">
+			<dhcp-server ip_first="10.0.2.2" ip_last="10.0.2.2"/>
+		</domain>
+	</config>
+</launcher>
+

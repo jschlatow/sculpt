@@ -1,0 +1,49 @@
+<launcher ram="200M" pkg="trace_recorder">
+	<affinity xpos="0" ypos="0" width="1" height="2"/>
+	<route>
+		<service name="File_system">
+			<child name="recall_fs"/>
+		</service>
+		<service name="TRACE">
+			<parent/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+		<service name="ROM" label="platform_info">
+			<parent label="platform_info"/>
+		</service>
+	</route>
+
+	<config period_ms="1000" enable="no">
+		<vfs> <fs label="target"/> </vfs>
+
+		<policy label_suffix="nic_router" thread="ep" policy="ctf_rpc_name" buffer="32M">
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="nic_perf_rx" thread="ep" policy="ctf_rpc_name" buffer="16M">
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="nic_perf_tx" thread="ep" policy="ctf_rpc_name" buffer="16M">
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="test-nic_perf_lwip_tx -> nic_perf" thread="ep" policy="ctf_rpc_name" buffer="16M">
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="recv" thread="ep" policy="ctf_rpc_name" buffer="16M">
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="send" thread="ep" policy="ctf_rpc_name" buffer="2M">
+			<ctf/>
+		</policy>
+
+		<policy label_suffix="nic_drv" thread="ep" policy="ctf_rpc_name" buffer="2M">
+			<ctf/>
+		</policy>
+	</config>
+</launcher>

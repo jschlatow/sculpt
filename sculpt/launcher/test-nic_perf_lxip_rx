@@ -1,0 +1,7 @@
+<launcher pkg="test-nic_perf_lxip_rx">
+	<affinity xpos="1" ypos="0" width="1" height="2"/>
+	<route>
+		<service name="RM"> <parent/> </service>
+	</route>
+</launcher>
+
