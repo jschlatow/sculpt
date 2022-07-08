@@ -1,0 +1,8 @@
+<launcher pkg="test-udp">
+	<route>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+	</route>
+
+</launcher>

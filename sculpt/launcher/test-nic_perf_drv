@@ -1,0 +1,9 @@
+<launcher pkg="test-nic_perf_drv">
+	<affinity xpos="1" ypos="0" width="1" height="2"/>
+	<route>
+		<service name="Platform"> <parent label="nic"/> </service>
+		<service name="ROM" label_last="nic_drv"> <parent label="nic_drv"/> </service>
+		<service name="RM"> <parent/> </service>
+	</route>
+</launcher>
+

@@ -1,0 +1,20 @@
+<launcher pkg="test-udp">
+	<route>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+	</route>
+
+	<config>
+		<arg value="send"/>
+		<arg value="10.0.1.1"/>
+		<libc stdout="/log" stderr="/log" socket="/socket"/>
+		<vfs>
+			<log/>
+			<dir name="socket">
+				<lwip dhcp="yes"/>
+			</dir>
+		</vfs>
+	</config>
+
+</launcher>
