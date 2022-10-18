@@ -40,7 +40,7 @@
 			<parent label="platform_info"/>
 		</service>
 		<service name="Report" label_last="shape">
-			<parent/>
+			<child name="wm"/>
 		</service>
 		<service name="Report" label_last="clipboard">
 			<child name="wm"/>
