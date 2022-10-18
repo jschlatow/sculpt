@@ -1,22 +1,10 @@
-<launcher ram="5200M" pkg="vbox6-block-capture">
+<launcher ram="5200M" pkg="vbox6">
 	<route>
-		<service name="Block" label_suffix=" -> 1">
-			<child name="nvme-0.part_block" label="1"/>
-		</service>
-		<service name="Block" label_suffix=" -> 4">
-			<child name="nvme-0.part_block" label="4"/>
-		</service>
-		<service name="Block" label_suffix=" -> 5">
-			<child name="nvme-0.part_block" label="5"/>
-		</service>
 		<service name="File_system" label="vm">
-			<child name="archlinux_vm_fs"/>
+			<child name="ubuntu_vm_fs"/>
 		</service>
 		<service name="File_system" label="shared">
 			<child name="shared_fs"/>
-		</service>
-		<service name="File_system" label="depot">
-			<child name="depot_fs"/>
 		</service>
 		<service name="VM">
 			<parent/>
@@ -61,12 +49,6 @@
 			<child name="usb_devices_rom"/>
 		</service>
 		<service name="Usb">
-			<parent/>
-		</service>
-		<service name="ROM" label="mesa_gpu_drv.lib.so">
-			<child name="mesa_gpu-intel"/>
-		</service>
-		<service name="Gpu">
 			<parent/>
 		</service>
 	</route>

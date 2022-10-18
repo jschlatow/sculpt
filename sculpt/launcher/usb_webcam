@@ -1,0 +1,10 @@
+<launcher pkg="usb_webcam">
+	<route>
+		<service name="Usb">
+			<parent/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+	</route>
+</launcher>

@@ -73,6 +73,12 @@
 		<route/>
 	</start>
 
+	<start name="mesa_gpu-intel" pkg="mesa_gpu-intel">
+		<route>
+			<service name="RM"> <parent/> </service>
+		</route>
+	</start>
+
 	<start name="shared_fs"/>
 	<start name="keyboard_fs"/>
 	<start name="depot_fs"/>

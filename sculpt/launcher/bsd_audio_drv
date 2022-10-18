@@ -1,0 +1,13 @@
+<launcher pkg="bsd_audio_drv" priority="-1">
+	<config verbose="yes">
+		<mixer field="record.enable" value="on"/>
+	</config>
+	<route>
+		<service name="Platform">
+			<parent label="audio"/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+	</route>
+</launcher>

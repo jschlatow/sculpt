@@ -1,0 +1,13 @@
+<launcher pkg="mixer" priority="-1">
+	<config verbose_sessions="yes">
+		<default out_volume="75" volume="25" muted="false"/>
+	</config>
+	<route>
+		<service name="Audio_out">
+			<child name="bsd_audio_drv"/>
+		</service>
+		<service name="Report">
+			<parent/>
+		</service>
+	</route>
+</launcher>

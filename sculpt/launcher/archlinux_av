@@ -22,13 +22,13 @@
 			<parent/>
 		</service>
 		<service name="Audio_out">
-			<child name="black_hole"/>
+			<child name="mixer"/>
 		</service>
 		<service name="Audio_in">
-			<child name="black_hole"/>
+			<child name="bsd_audio_drv"/>
 		</service>
 		<service name="Capture">
-			<child name="black_hole"/>
+			<child name="usb_webcam"/>
 		</service>
 		<service name="Gui">
 			<child name="wm"/>
