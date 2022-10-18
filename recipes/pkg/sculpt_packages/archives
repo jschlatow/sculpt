@@ -4,3 +4,4 @@ _/pkg/mbimcli
 _/pkg/usb_modem_drv
 _/pkg/mobile_network
 _/pkg/sdl_vnc
+_/pkg/trace_recorder
