@@ -1,0 +1,55 @@
+<launcher ram="2000M" pkg="vbox6">
+	<route>
+		<service name="File_system" label="vm">
+			<child name="vm_fs"/>
+		</service>
+		<service name="File_system" label="shared">
+			<child name="recall_fs"/>
+		</service>
+		<service name="VM">
+			<parent/>
+		</service>
+		<service name="Audio_out">
+			<child name="black_hole"/>
+		</service>
+		<service name="Audio_in">
+			<child name="black_hole"/>
+		</service>
+		<service name="Capture">
+			<child name="black_hole"/>
+		</service>
+		<service name="Gui">
+			<child name="wm"/>
+		</service>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+		<service name="ROM" label="capslock">
+			<parent label="capslock"/>
+		</service>
+		<service name="ROM" label="platform_info">
+			<parent label="platform_info"/>
+		</service>
+		<service name="Report" label_last="shape">
+			<child name="wm"/>
+		</service>
+		<service name="Report" label_last="clipboard">
+			<child name="wm"/>
+		</service>
+		<service name="ROM" label_last="clipboard">
+			<child name="wm"/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+		<service name="ROM" label="usb_devices">
+			<child name="usb_devices_rom"/>
+		</service>
+		<service name="Usb">
+			<parent/>
+		</service>
+	</route>
+</launcher>
