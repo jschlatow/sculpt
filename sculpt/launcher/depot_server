@@ -1,0 +1,13 @@
+<launcher pkg="depot_server">
+	<route>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+		<service name="File_system">
+			<child name="recall_fs"/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+	</route>
+</launcher>

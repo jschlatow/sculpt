@@ -19,4 +19,4 @@ nic_router:   usrp_demo
 
 # selection of launcher-menu entries
 launcher: usb_devices_rom vm_fs system_shell
-launcher: dashboard_server
+launcher: dashboard_server depot_server
