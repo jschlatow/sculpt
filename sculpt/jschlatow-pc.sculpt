@@ -16,7 +16,7 @@ depot: ssumpf skalk
 usb:          jschlatow
 event_filter: jschlatow
 nitpicker:    jschlatow
-deploy:       jschlatow
+deploy:       jschlatow-t490s
 ram_fs:       import_depot
 
 # selection of launcher-menu entries
@@ -24,3 +24,7 @@ launcher: shared_fs usb_devices_rom file_vault keyboard_fs usb_modem_drv
 launcher: mbimcli mobile_network archlinux_vm_fs user_keys archlinux depot_fs
 launcher: archlinux_av bsd_audio_drv usb_webcam mixer
 launcher: ubuntu_vm_fs ubuntu
+launcher: top report_dump
+
+# preconfigured example scenarios
+presets: empty nano3d window_manager mobile_browsing unix_shell jschlatow-t490s
