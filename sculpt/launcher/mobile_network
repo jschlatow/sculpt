@@ -3,9 +3,6 @@
 		<service name="Usb">
 			<parent/>
 		</service>
-		<service name="Nic">
-			<child name="nic_router"/>
-		</service>
 		<service name="File_system">
 			<child name="recall_fs"/>
 		</service>
