@@ -1,0 +1,13 @@
+<runtime ram="16M" caps="300" binary="usb_net_drv">
+
+	<requires> <uplink/> <usb/> <rm/> </requires>
+	<provides> <terminal/> </provides>
+
+	<config mac="02:00:00:00:01:01"/>
+
+	<content>
+		<rom label="ld.lib.so"/>
+		<rom label="usb_net_drv"/>
+	</content>
+
+</runtime>
