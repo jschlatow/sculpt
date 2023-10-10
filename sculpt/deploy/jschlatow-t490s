@@ -84,5 +84,6 @@
 	<start name="depot_fs"/>
 	<start name="user_keys"/>
 	<start name="archlinux_vm_fs"/>
+	<start name="battery"/>
 
 </config>

@@ -1,0 +1,16 @@
+<launcher pkg="jschlatow/pkg/screenshot/2023-10-25">
+	<route>
+		<service name="Gui">
+			<parent/>
+		</service>
+		<service name="Capture">
+			<parent label="global"/>
+		</service>
+		<service name="File_system" label="target">
+			<child name="recall_fs"/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+	</route>
+</launcher>

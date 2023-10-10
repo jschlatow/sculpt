@@ -1,0 +1,13 @@
+<launcher pkg="usb_net">
+	<route>
+		<service name="Usb">
+			<parent label="usb_net -> "/>
+		</service>
+		<service name="RM">
+			<parent/>
+		</service>
+		<service name="Report">
+			<parent/>
+		</service>
+	</route>
+</launcher>

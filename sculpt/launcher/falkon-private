@@ -1,0 +1,15 @@
+<launcher pkg="cproc/pkg/falkon-jemalloc/2023-10-19">
+	<route>
+		<service name="Nic">       <child name="nic_router"/>      </service>
+		<service name="Rtc">       <child name="system_clock-pc"/> </service>
+		<service name="Audio_out"> <child name="mixer"/>           </service>
+		<service name="Audio_in">  <child name="bsd_audio_drv"/>   </service>
+		<service name="Capture">   <child name="usb_webcam"/>      </service>
+		<service name="File_system" label="config">     <child name="ram_fs"/> </service>
+		<service name="File_system" label="downloads">  <child name="ram_fs"/> </service>
+		<service name="Gui">                            <child name="wm"/> </service>
+		<service name="Report" label="falkon -> shape"> <child name="wm"/> </service>
+		<service name="Report" label="clipboard">       <child name="wm"/> </service>
+		<service name="ROM"    label="clipboard">       <child name="wm"/> </service>
+	</route>
+</launcher>

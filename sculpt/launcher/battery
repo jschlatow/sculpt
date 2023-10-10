@@ -1,0 +1,28 @@
+<launcher pkg="alex-ab/pkg/battery/2023-10-19">
+	<route>
+		<service name="Gui">
+			<child name="wm"/>
+		</service>
+		<service name="File_system" label="fonts">
+			<child name="fonts_fs"/>
+		</service>
+		<service name="IO_MEM">
+			<parent/>
+		</service>
+		<service name="IO_PORT">
+			<parent/>
+		</service>
+		<service name="Platform">
+			<parent label="acpica"/>
+		</service>
+		<service name="ROM" label="platform_info">
+			<parent label="platform_info"/>
+		</service>
+		<service name="ROM" label="system">
+			<parent label="config -> managed/system"/>
+		</service>
+		<service name="Report">
+			<parent/>
+		</service>
+	</route>
+</launcher>

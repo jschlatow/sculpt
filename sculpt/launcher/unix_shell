@@ -1,0 +1,14 @@
+<launcher pkg="jschlatow/pkg/unix_shell/2023-10-25">
+	<route>
+		<service name="Gui">                           <child name="wm"/>              </service>
+		<service name="Rtc">                           <child name="system_clock-pc"/> </service>
+		<service name="File_system" label="home">      <child name="default_fs_rw"/>   </service>
+		<service name="File_system" label="report">    <parent label="report"/>        </service>
+		<service name="File_system" label="shared">    <child name="shared_fs"/>       </service>
+		<service name="File_system" label="config">    <parent label="config"/>        </service>
+		<service name="File_system" label="fonts">     <child name="fonts_fs"/>        </service>
+		<service name="File_system" label="dotfiles">  <child name="dotfiles_fs"/>     </service>
+		<service name="ROM"         label="clipboard"> <child name="wm"/>              </service>
+		<service name="Report"      label="clipboard"> <child name="wm"/>              </service>
+	</route>
+</launcher>

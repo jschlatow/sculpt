@@ -66,28 +66,8 @@
 		</route>
 	</start>
 
-	<start name="dotfiles_fs" pkg="jschlatow/pkg/dotfiles_fs/2023-04-28">
-		<route>
-			<service name="File_system" label="dotfiles"> <child name="recall_fs"/>         </service>
-			<service name="ROM"         label="vimrc">    <parent label="config -> vimrc"/> </service>
-		</route>
-	</start>
-
+	<start name="dotfiles_fs"/>
 	<start name="shared_fs"/>
-
-	<start name="unix_shell" pkg="jschlatow/pkg/unix_shell/2023-05-02">
-		<route>
-			<service name="Gui">                           <child name="wm"/>              </service>
-			<service name="Rtc">                           <child name="system_clock-pc"/> </service>
-			<service name="File_system" label="home">      <child name="default_fs_rw"/>   </service>
-			<service name="File_system" label="report">    <parent label="report"/>        </service>
-			<service name="File_system" label="shared">    <child name="shared_fs"/>       </service>
-			<service name="File_system" label="config">    <parent label="config"/>        </service>
-			<service name="File_system" label="fonts">     <child name="fonts_fs"/>        </service>
-			<service name="File_system" label="dotfiles">  <child name="dotfiles_fs"/>     </service>
-			<service name="ROM"         label="clipboard"> <child name="wm"/>              </service>
-			<service name="Report"      label="clipboard"> <child name="wm"/>              </service>
-		</route>
-	</start>
+	<start name="unix_shell"/>
 
 </config>
