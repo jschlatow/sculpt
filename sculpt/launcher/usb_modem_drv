@@ -1,7 +1,7 @@
 <launcher pkg="usb_modem_drv">
 	<route>
 		<service name="Uplink">
-			<child name="nic_router"/>
+			<child name="black_hole"/>
 		</service>
 		<service name="Usb">
 			<parent/>
