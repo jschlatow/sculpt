@@ -1,3 +1,4 @@
+_/pkg/vbox6-block-capture
 _/pkg/user_keys
 _/pkg/fs_report
 _/pkg/mbimcli
@@ -5,3 +6,4 @@ _/pkg/usb_modem_drv
 _/pkg/mobile_network
 _/pkg/sdl_vnc
 _/pkg/trace_recorder
+_/pkg/wireguard
