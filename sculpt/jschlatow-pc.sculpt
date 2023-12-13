@@ -27,6 +27,7 @@ launcher: ubuntu_vm_fs ubuntu
 launcher: top report_dump battery lock
 launcher: falkon falkon-private morph morph-private
 launcher: screenshot dotfiles_fs unix_shell
+launcher: report_fs_rom system_info
 
 # preconfigured example scenarios
 presets: empty nano3d window_manager mobile_browsing unix_shell jschlatow-t490s

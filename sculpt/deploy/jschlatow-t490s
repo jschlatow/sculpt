@@ -85,5 +85,7 @@
 	<start name="user_keys"/>
 	<start name="archlinux_vm_fs"/>
 	<start name="battery"/>
+	<start name="report_fs_rom"/>
+	<start name="system_info"/>
 
 </config>

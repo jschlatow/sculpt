@@ -1,0 +1,16 @@
+<launcher pkg="jschlatow/pkg/system_info/2023-12-13" priority="-3">
+	<route>
+		<service name="Gui">
+			<parent label="backdrop"/>
+		</service>
+		<service name="Rtc">
+			<child name="system_clock-pc"/>
+		</service>
+		<service name="ROM" label="drivers/iommu">
+			<child name="report_fs_rom"/>
+		</service>
+		<service name="ROM" label="runtime/nic_router/state">
+			<child name="report_fs_rom"/>
+		</service>
+	</route>
+</launcher>
