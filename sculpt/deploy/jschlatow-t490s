@@ -83,7 +83,8 @@
 	<start name="keyboard_fs"/>
 	<start name="depot_fs"/>
 	<start name="user_keys"/>
-	<start name="archlinux_vm_fs"/>
+	<start name="dotfiles_fs"/>
+	<start name="unix_shell"/>
 	<start name="acpica"/>
 	<start name="report_fs_rom"/>
 	<start name="system_info"/>
