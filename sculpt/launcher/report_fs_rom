@@ -1,4 +1,4 @@
-<launcher pkg="fs_rom" priority="-3>
+<launcher pkg="fs_rom" priority="-3">
 	<route>
 		<service name="File_system">
 			<parent label="report"/>

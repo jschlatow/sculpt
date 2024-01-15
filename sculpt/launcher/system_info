@@ -1,10 +1,13 @@
-<launcher pkg="jschlatow/pkg/system_info/2023-12-13" priority="-3">
+<launcher pkg="jschlatow/pkg/system_info/2024-01-08" priority="-3">
 	<route>
 		<service name="Gui">
 			<parent label="backdrop"/>
 		</service>
 		<service name="Rtc">
 			<child name="system_clock-pc"/>
+		</service>
+		<service name="ROM" label="runtime/acpica/acpi_battery">
+			<child name="report_fs_rom"/>
 		</service>
 		<service name="ROM" label="drivers/iommu">
 			<child name="report_fs_rom"/>
@@ -13,4 +16,28 @@
 			<child name="report_fs_rom"/>
 		</service>
 	</route>
+
+	<config default_timezone="CET-1CEST,M3.5.0,M10.5.0" background_color="#11558833">
+		<vfs> <dir name="dev"> <log/> <rtc/> </dir> </vfs>
+		<libc stdout="/dev/log" rtc="/dev/rtc"/>
+		<clock/>
+		<calendar/>
+		<battery rom="runtime/acpica/acpi_battery"/>
+		<tabular rom="runtime/nic_router/state" alt="no IP found">
+			<node type="domain" name="uplink">
+				<row label="Uplink" attribute="ipv4"/>
+			</node>
+			<node type="domain" name="default">
+				<row label="Default" attribute="ipv4"/>
+			</node>
+		</tabular>
+		<tabular rom="drivers/iommu" alt="no IOMMU present">
+			<node type="intel">
+				<row label="IOMMU" attribute="name" highlight="yes"/>
+				<row label="DMA Remapping" attribute="dma_remapping"/>
+				<row label="IRQ Remapping" attribute="irq_remapping"/>
+			</node>
+		</tabular>
+	</config>
+	
 </launcher>

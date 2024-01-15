@@ -24,7 +24,7 @@ launcher: shared_fs usb_devices_rom file_vault keyboard_fs usb_modem_drv
 launcher: mbimcli mobile_network archlinux_vm_fs user_keys archlinux depot_fs
 launcher: archlinux_av bsd_audio_drv usb_webcam mixer
 launcher: ubuntu_vm_fs ubuntu
-launcher: top report_dump battery lock
+launcher: top report_dump acpica lock
 launcher: falkon falkon-private morph morph-private
 launcher: screenshot dotfiles_fs unix_shell
 launcher: report_fs_rom system_info
