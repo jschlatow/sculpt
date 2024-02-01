@@ -1,0 +1,69 @@
+<runtime ram="5M" caps="400" binary="init">
+
+	<provides> <rtc/> <report/> </provides>
+
+	<requires> <timer/> <irq/> <io_port/> </requires>
+
+	<content>
+		<rom label="ld.lib.so"/>
+		<rom label="init"/>
+		<rom label="rtc_drv"/>
+		<rom label="system_rtc"/>
+		<rom label="report_rom"/>
+	</content>
+
+	<config>
+
+		<parent-provides>
+			<service name="ROM"/>
+			<service name="IRQ"/>
+			<service name="IO_MEM"/>
+			<service name="IO_PORT"/>
+			<service name="PD"/>
+			<service name="RM"/>
+			<service name="CPU"/>
+			<service name="LOG"/>
+			<service name="Timer"/>
+		</parent-provides>
+
+		<default caps="100"/>
+
+		<service name="Rtc"> <default-policy> <child name="system_rtc"/> </default-policy> </service>
+		<service name="Report" label_suffix="set_rtc">
+			<default-policy> <child name="report_rom" label="set_rtc"/> </default-policy>
+		</service>
+
+		<start name="report_rom">
+			<resource name="RAM" quantum="1M"/>
+			<provides> <service name="Report"/> <service name="ROM"/> </provides>
+			<config verbose="no">
+				<policy label="rtc_drv -> set_rtc" report="set_rtc"/>
+			</config>
+			<route>
+				<any-service> <parent/> </any-service>
+			</route>
+		</start>
+
+		<start name="rtc_drv">
+			<resource name="RAM" quantum="1M"/>
+			<provides><service name="Rtc"/></provides>
+			<config allow_setting_rtc="true"/>
+			<route>
+				<service name="ROM" label="set_rtc"> <child name="report_rom"/> </service>
+				<any-service> <parent/> </any-service>
+			</route>
+		</start>
+
+		<start name="system_rtc">
+			<resource name="RAM" quantum="1M"/>
+			<provides><service name="Rtc"/></provides>
+			<config/>
+			<route>
+				<service name="Rtc"> <child name="rtc_drv"/> </service>
+				<any-service> <parent/> </any-service>
+			</route>
+		</start>
+
+	</config>
+
+</runtime>

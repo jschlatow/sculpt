@@ -1,0 +1,11 @@
+<runtime ram="8M" caps="400" binary="sntp_client">
+
+	<requires> <nic/> <report label="set_rtc"/> </requires>
+
+	<config verbose="no" dst_addr="pool.ntp.org" period_min="60"/>
+
+	<content>
+		<rom label="sntp_client"/>
+	</content>
+
+</runtime>
