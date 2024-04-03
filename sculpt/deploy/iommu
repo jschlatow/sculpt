@@ -1,0 +1,56 @@
+<config arch="">
+
+	<common_routes>
+		<service name="ROM" label_last="ld.lib.so"> <parent/> </service>
+		<service name="CPU">   <parent/> </service>
+		<service name="PD">    <parent/> </service>
+		<service name="LOG">   <parent/> </service>
+		<service name="Timer"> <parent/> </service>
+	</common_routes>
+
+	<start name="report_dump"/>
+	<start name="system_clock-dummy"/>
+
+	<start name="recall_fs" pkg="chroot">
+		<route>
+			<service name="File_system"> <child name="default_fs_rw"/> </service>
+		</route>
+		<config> <default-policy path_prefix="/recall" writeable="yes"/> </config>
+	</start>
+
+	<start name="report_fs_rom" pkg="fs_rom" priority="-3">
+		<route>
+			<service name="File_system">
+				<parent label="report"/>
+			</service>
+		</route>
+	</start>
+
+	<start name="system_info" pkg="jschlatow/pkg/system_info/2024-01-08" priority="-3">
+		<route>
+			<service name="Gui">
+				<parent label="backdrop"/>
+			</service>
+			<service name="Rtc">
+				<child name="system_clock-dummy"/>
+			</service>
+			<service name="ROM" label="drivers/iommu">
+				<child name="report_fs_rom"/>
+			</service>
+		</route>
+
+		<config default_timezone="CET-1CEST,M3.5.0,M10.5.0" background_color="#115588">
+			<vfs> <dir name="dev"> <log/> <rtc/> </dir> </vfs>
+			<libc stdout="/dev/log" rtc="/dev/rtc"/>
+			<tabular rom="drivers/iommu" alt="no IOMMU present">
+				<node type="intel">
+					<row label="IOMMU" attribute="name" highlight="yes"/>
+					<row label="DMA Remapping" attribute="dma_remapping"/>
+					<row label="IRQ Remapping" attribute="irq_remapping"/>
+				</node>
+			</tabular>
+		</config>
+	
+	</start>
+
+</config>

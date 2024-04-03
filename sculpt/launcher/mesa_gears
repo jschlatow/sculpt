@@ -1,0 +1,13 @@
+<launcher pkg="mesa_gears">
+	<route>
+		<service name="Gui">
+			<child name="wm"/>
+		</service>
+		<service name="Gpu">
+			<parent/>
+		</service>
+		<service name="ROM" label="mesa_gpu_drv.lib.so">
+			<child name="mesa_gpu-intel"/>
+		</service>
+	</route>
+</launcher>
