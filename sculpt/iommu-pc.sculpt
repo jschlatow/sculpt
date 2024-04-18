@@ -8,8 +8,8 @@ import: pkg/sculpt_drivers-pc pkg/pc_wifi src/pc_nic_drv
 
 # selection of launcher-menu entries
 launcher: vm_fs shared_fs report_dump system_clock-dummy
-launcher: mesa_gpu-intel mesa_gears
 launcher: usb_webcam audio mixer black_hole system_clock recall_fs
+launcher: mesa_gpu-intel mesa_gpu-cpu mesa_gears mesa_gears-cpu glmark2
 launcher: acpi_support
 
 deploy: iommu
@@ -21,4 +21,4 @@ depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
 depot: ssumpf skalk
 
 # preconfigured example scenarios
-presets: empty nano3d window_manager mesa
+presets: empty nano3d window_manager mesa mesa_cpu glmark2

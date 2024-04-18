@@ -1,0 +1,5 @@
+<launcher pkg="mesa_gpu-cpu">
+	<route>
+		<service name="RM"> <parent/> </service>
+	</route>
+</launcher>
