@@ -1,7 +1,7 @@
 <launcher pkg="usb_net">
 	<route>
 		<service name="Usb">
-			<parent label="usb_net -> "/>
+			<child name="usb" label="usb_net -> "/>
 		</service>
 		<service name="RM">
 			<parent/>

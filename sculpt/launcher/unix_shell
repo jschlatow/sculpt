@@ -1,7 +1,7 @@
-<launcher pkg="jschlatow/pkg/unix_shell/2023-10-25">
+<launcher pkg="jschlatow/pkg/unix_shell/2024-04-22">
 	<route>
 		<service name="Gui">                           <child name="wm"/>              </service>
-		<service name="Rtc">                           <child name="system_clock-pc"/> </service>
+		<service name="Rtc">                           <child name="system_clock"/>    </service>
 		<service name="File_system" label="home">      <child name="default_fs_rw"/>   </service>
 		<service name="File_system" label="report">    <parent label="report"/>        </service>
 		<service name="File_system" label="shared">    <child name="shared_fs"/>       </service>

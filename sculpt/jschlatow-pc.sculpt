@@ -4,7 +4,7 @@ system:  pc
 gpu_drv: intel
 
 # supplemental depot content added to the system image
-import: pkg/drivers_managed-pc pkg/pc_wifi src/pc_nic_drv
+import: pkg/sculpt_drivers-pc
 
 # selection of accepted depot-package providers
 depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
@@ -20,15 +20,16 @@ deploy:       jschlatow-t490s
 ram_fs:       depot
 
 # selection of launcher-menu entries
-launcher: shared_fs usb_devices_rom file_vault keyboard_fs usb_modem_drv
+launcher: shared_fs file_vault keyboard_fs usb_modem_drv black_hole
 launcher: mbimcli mobile_network archlinux_vm_fs user_keys archlinux depot_fs
-launcher: archlinux_av bsd_audio_drv usb_webcam mixer
+launcher: archlinux_av audio usb_webcam mixer
 launcher: ubuntu_vm_fs ubuntu
-launcher: top report_dump acpica lock
+launcher: top report_dump acpi_support lock
 launcher: falkon falkon-private morph morph-private
 launcher: screenshot dotfiles_fs unix_shell
 launcher: report_fs_rom system_info goa_testbed
+launcher: recall_fs system_clock download_debug_info
 
 # preconfigured example scenarios
 presets: empty nano3d window_manager mobile_browsing unix_shell jschlatow-t490s
-presets: shutdown goa_testbed
+presets: goa_testbed

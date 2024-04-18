@@ -1,6 +1,6 @@
 <launcher pkg="chroot">
 	<route>
-		<service name="File_system"> <child name="nvme-0.6.fs"/> </service>
+		<service name="File_system"> <child name="nvme-1.6.fs"/> </service>
 	</route>
 	<config> <default-policy path="/vm/ubuntu/Ubuntu" writeable="yes"/> </config>
 </launcher>

@@ -21,6 +21,6 @@ ram_fs:       import_depot
 nic_router:   netperf
 
 # selection of launcher-menu entries
-launcher: shared_fs usb_devices_rom trace_recorder
+launcher: shared_fs trace_recorder
 launcher: netperf_lwip netperf_lxip
 launcher: iperf_lwip iperf_lxip

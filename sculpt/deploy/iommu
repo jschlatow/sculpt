@@ -26,7 +26,7 @@
 		</route>
 	</start>
 
-	<start name="system_info" pkg="jschlatow/pkg/system_info/2024-01-08" priority="-3">
+	<start name="system_info" pkg="jschlatow/pkg/system_info/2024-04-22" priority="-3">
 		<route>
 			<service name="Gui">
 				<parent label="backdrop"/>

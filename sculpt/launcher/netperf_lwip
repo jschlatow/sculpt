@@ -4,7 +4,7 @@
 			<child name="nic_router"/>
 		</service>
 		<service name="Rtc">
-			<child name="system_clock-pc"/>
+			<child name="system_clock"/>
 		</service>
 		<service name="RM">
 			<parent/>

@@ -3,8 +3,8 @@
 		<chargen>
 			<remap>
 				<key name="KEY_CAPSLOCK" to="KEY_ESC"/>
-				<key name="KEY_F12" to="KEY_DASHBOARD"/>
-				<key name="KEY_SYSRQ" to="KEY_PRINT"/>
+				<key name="KEY_F12"      to="KEY_DASHBOARD"/>
+				<key name="KEY_SYSRQ"    to="KEY_PRINT"/>
 				<key name="KEY_RIGHTMETA" to="KEY_SCREEN"/>
 				<ignore-key name="KEY_POWER"/>
 				<ignore-key name="KEY_UNKNOWN"/>
@@ -18,7 +18,12 @@
 							<horizontal button="BTN_MIDDLE" speed_percent="-10"/>
 						</button-scroll>
 					</accelerate>
+					<touch-click>
+						<input name="touch"/>
+					</touch-click>
 					<input name="usb"/>
+					<input name="touch"/>
+					<input name="sdl"/>
 				</merge>
 			</remap>
 			<mod1>
@@ -34,10 +39,12 @@
 				<rom name="capslock"/>
 			</mod4>
 			<repeat delay_ms="230" rate_ms="40"/>
-			<include rom="en_us.chargen"/>
-			<include rom="special.chargen"/>
+			<include rom="keyboard/en_us"/>
+			<include rom="keyboard/special"/>
 		</chargen>
 	</output>
-	<policy label="ps2" input="ps2"/>
-	<policy label="usb" input="usb"/>
+	<policy label="runtime -> ps2"     input="ps2"/>
+	<policy label="runtime -> usb_hid" input="usb"/>
+	<policy label="drivers -> touch"   input="touch"/>
+	<policy label="drivers -> sdl"     input="sdl"/>
 </config>

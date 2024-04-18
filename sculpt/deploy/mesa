@@ -30,7 +30,7 @@
 				<child name="wm"/>
 			</service>
 			<service name="Gpu">
-				<parent/>
+				<child name="intel_gpu"/>
 			</service>
 			<service name="ROM" label="mesa_gpu_drv.lib.so">
 				<child name="mesa_gpu-intel"/>

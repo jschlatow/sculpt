@@ -1,12 +1,12 @@
-<launcher pkg="jschlatow/pkg/system_info/2024-01-08" priority="-3">
+<launcher pkg="jschlatow/pkg/system_info/2024-04-22" priority="-3">
 	<route>
 		<service name="Gui">
 			<parent label="backdrop"/>
 		</service>
 		<service name="Rtc">
-			<child name="system_clock-pc"/>
+			<child name="system_clock"/>
 		</service>
-		<service name="ROM" label="runtime/acpica/acpi_battery">
+		<service name="ROM" label="runtime/acpi_support/acpi_battery">
 			<child name="report_fs_rom"/>
 		</service>
 		<service name="ROM" label="drivers/iommu">
@@ -22,7 +22,7 @@
 		<libc stdout="/dev/log" rtc="/dev/rtc"/>
 		<clock/>
 		<calendar/>
-		<battery rom="runtime/acpica/acpi_battery"/>
+		<battery rom="runtime/acpi_support/acpi_battery"/>
 		<tabular rom="runtime/nic_router/state" alt="no IP found">
 			<node type="domain" name="uplink">
 				<row label="Uplink" attribute="ipv4"/>

@@ -1,13 +1,13 @@
 <launcher ram="5200M" pkg="vbox6-block-capture">
 	<route>
 		<service name="Block" label_suffix=" -> 1">
-			<child name="nvme-0.part_block" label="1"/>
+			<child name="nvme-1.part" label="1"/>
 		</service>
 		<service name="Block" label_suffix=" -> 4">
-			<child name="nvme-0.part_block" label="4"/>
+			<child name="nvme-1.part" label="4"/>
 		</service>
 		<service name="Block" label_suffix=" -> 5">
-			<child name="nvme-0.part_block" label="5"/>
+			<child name="nvme-1.part" label="5"/>
 		</service>
 		<service name="File_system" label="vm">
 			<child name="archlinux_vm_fs"/>
@@ -21,11 +21,11 @@
 		<service name="VM">
 			<parent/>
 		</service>
-		<service name="Audio_out">
+		<service name="Play">
 			<child name="mixer"/>
 		</service>
-		<service name="Audio_in">
-			<child name="bsd_audio_drv"/>
+		<service name="Record">
+			<child name="mixer"/>
 		</service>
 		<service name="Capture">
 			<child name="usb_webcam"/>
@@ -55,19 +55,16 @@
 			<parent/>
 		</service>
 		<service name="Rtc">
-			<child name="system_clock-pc"/>
-		</service>
-		<service name="ROM" label="usb_devices">
-			<child name="usb_devices_rom"/>
+			<child name="system_clock"/>
 		</service>
 		<service name="Usb">
-			<parent/>
+			<child name="usb"/>
 		</service>
 		<service name="ROM" label="mesa_gpu_drv.lib.so">
 			<child name="mesa_gpu-intel"/>
 		</service>
 		<service name="Gpu">
-			<parent/>
+			<child name="intel_gpu"/>
 		</service>
 	</route>
 </launcher>

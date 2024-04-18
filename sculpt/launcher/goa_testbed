@@ -1,16 +1,16 @@
-<launcher pkg="jschlatow/pkg/goa_testbed/2024-01-03">
+<launcher pkg="jschlatow/pkg/goa_testbed/2024-04-22">
 	<route>
 		<service name="TRACE">       <parent/> </service>
 		<service name="VM">          <parent/> </service>
-		<service name="Gpu">         <parent/> </service>
-		<service name="Gui">         <child name="wm"/>              </service>
-		<service name="Rtc">         <child name="system_clock-pc"/> </service>
-		<service name="Audio_in">    <child name="black_hole"/>      </service>
-		<service name="Audio_out">   <child name="black_hole"/>      </service>
-		<service name="Usb">         <child name="black_hole"/>      </service>
-		<service name="Event">       <child name="black_hole"/>      </service>
-		<service name="Capture">     <parent label="global"/>        </service>
-		<service name="File_system"> <child name="recall_fs"/>       </service>
+		<service name="Gpu">         <child name="intel_gpu"/>    </service>
+		<service name="Gui">         <child name="wm"/>           </service>
+		<service name="Rtc">         <child name="system_clock"/> </service>
+		<service name="Play">        <child name="mixer"/>        </service>
+		<service name="Record">      <child name="mixer"/>        </service>
+		<service name="Usb">         <child name="black_hole"/>   </service>
+		<service name="Event">       <child name="black_hole"/>   </service>
+		<service name="Capture">     <parent label="global"/>     </service>
+		<service name="File_system"> <child name="recall_fs"/>    </service>
 		<service name="Nic" label_prefix="tcp_terminal"> <child name="nic_router" label="telnet"/> </service>
 		<service name="Nic" label_prefix="lighttpd">     <child name="nic_router" label="http"/>   </service>
 		<service name="Nic"> <!-- for test scenario -->  <child name="nic_router"/>                </service>

@@ -9,16 +9,7 @@
 		<service name="Timer"> <parent/> </service>
 	</common_routes>
 
-	<start name="system_clock-pc" pkg="system_clock-pc">
-		<route>
-			<service name="IRQ">
-				<parent/>
-			</service>
-			<service name="IO_PORT">
-				<parent/>
-			</service>
-		</route>
-	</start>
+	<start name="system_clock"/>
 
 	<start name="recall_fs" pkg="chroot">
 		<route>
@@ -65,8 +56,6 @@
 				<parent label="config -> managed/fonts"/> </service>
 		</route>
 	</start>
-
-	<start name="usb_devices_rom"/>
 
 	<start name="black_hole" pkg="black_hole">
 		<route/>

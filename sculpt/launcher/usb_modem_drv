@@ -4,7 +4,7 @@
 			<child name="black_hole"/>
 		</service>
 		<service name="Usb">
-			<parent/>
+			<child name="usb"/>
 		</service>
 		<service name="RM">
 			<parent/>

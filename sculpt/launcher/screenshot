@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/screenshot/2023-10-25">
+<launcher pkg="jschlatow/pkg/screenshot/2024-04-22">
 	<route>
 		<service name="Gui">
 			<parent/>
@@ -10,7 +10,7 @@
 			<child name="recall_fs"/>
 		</service>
 		<service name="Rtc">
-			<child name="system_clock-pc"/>
+			<child name="system_clock"/>
 		</service>
 	</route>
 </launcher>

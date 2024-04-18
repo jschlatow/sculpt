@@ -33,7 +33,7 @@
 	<global-key name="KEY_CAPSLOCK"  label="global_keys_handler -> input" />
 	<global-key name="KEY_NUMLOCK"   label="global_keys_handler -> input" />
 	<global-key name="KEY_SCROLLLOCK"   label="runtime -> user_keys -> user_keys -> input" />
-	<global-key name="KEY_PRINT"     label="runtime -> screenshot -> keys -> input" />
 	<global-key name="KEY_SCREEN"    label="runtime -> wm -> wm -> decorator" />
 	<global-key name="KEY_SCREEN"    label="runtime -> themed_wm -> wm -> decorator" />
+	<global-key name="KEY_PRINT"     label="runtime -> screenshot -> keys -> input"/>
 </config>

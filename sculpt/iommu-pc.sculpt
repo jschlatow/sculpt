@@ -8,11 +8,13 @@ import: pkg/sculpt_drivers-pc pkg/pc_wifi src/pc_nic_drv
 
 # selection of launcher-menu entries
 launcher: vm_fs shared_fs report_dump system_clock-dummy
-launcher: usb_webcam bsd_audio_drv mixer black_hole system_clock-pc
 launcher: mesa_gpu-intel mesa_gears
+launcher: usb_webcam audio mixer black_hole system_clock recall_fs
+launcher: acpi_support
 
 deploy: iommu
 ram_fs: depot
+manager: use_ram_fs
 
 # selection of accepted depot-package providers
 depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow

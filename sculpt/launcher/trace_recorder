@@ -7,7 +7,7 @@
 			<parent/>
 		</service>
 		<service name="Rtc">
-			<child name="system_clock-pc"/>
+			<child name="system_clock"/>
 		</service>
 		<service name="ROM" label="platform_info">
 			<parent label="platform_info"/>
