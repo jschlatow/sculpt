@@ -19,8 +19,8 @@
 		<rtc/>
 		<rom label="usb_devices"/>
 		<usb/>
-		<audio_out/>
-		<audio_in/>
+		<play/>
+		<record/>
 		<block/>
 	</requires>
 
@@ -41,8 +41,8 @@
 			<service name="File_system"/>
 			<service name="Usb"/>
 			<service name="Nic"/>
-			<service name="Audio_out"/>
-			<service name="Audio_in"/>
+			<service name="Play"/>
+			<service name="Record"/>
 			<service name="Capture"/>
 			<service name="Block"/>
 		</parent-provides>
@@ -84,7 +84,8 @@
 				<env key="VBOX_RELEASE_LOG_FLAGS" value="thread"/>
 			</config>
 			<route>
-				<service name="Audio_out">                  <parent/>                       </service>
+				<service name="Play">                       <parent/>                       </service>
+				<service name="Record">                     <parent/>                       </service>
 				<service name="File_system" label="shared"> <parent label="shared"/>        </service>
 				<service name="File_system" label="depot">  <parent label="depot"/>         </service>
 				<service name="File_system">                <parent label="vm"/>            </service>
