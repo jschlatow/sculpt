@@ -17,7 +17,7 @@ usb:          jschlatow
 event_filter: jschlatow
 nitpicker:    jschlatow
 deploy:       jschlatow-t490s
-ram_fs:       depot
+ram_fs:       import_depot
 
 # selection of launcher-menu entries
 launcher: shared_fs file_vault keyboard_fs usb_modem_drv black_hole
