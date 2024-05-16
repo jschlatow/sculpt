@@ -24,6 +24,7 @@
 					<input name="usb"/>
 					<input name="touch"/>
 					<input name="sdl"/>
+					<input name="vnc"/>
 				</merge>
 			</remap>
 			<mod1>
@@ -45,6 +46,7 @@
 	</output>
 	<policy label="runtime -> ps2"     input="ps2"/>
 	<policy label="runtime -> usb_hid" input="usb"/>
+	<policy label="runtime -> vnc"     input="vnc"/>
 	<policy label="drivers -> touch"   input="touch"/>
 	<policy label="drivers -> sdl"     input="sdl"/>
 </config>

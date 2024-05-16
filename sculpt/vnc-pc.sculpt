@@ -1,0 +1,25 @@
+# configuration decisions
+drivers: pc
+system:  pc
+gpu_drv: intel
+
+# supplemental depot content added to the system image
+import: pkg/sculpt_drivers-pc pkg/pc_wifi src/pc_nic_drv
+
+# selection of launcher-menu entries
+launcher: vm_fs shared_fs report_dump system_clock-dummy
+launcher: black_hole system_clock recall_fs
+launcher: acpi_support
+launcher: sdl_vnc vnc_server
+
+deploy: window_manager
+ram_fs: depot
+manager: use_ram_fs
+event_filter: jschlatow
+
+# selection of accepted depot-package providers
+depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
+depot: ssumpf skalk
+
+# preconfigured example scenarios
+presets: empty nano3d window_manager

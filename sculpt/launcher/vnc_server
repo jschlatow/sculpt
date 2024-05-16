@@ -1,0 +1,16 @@
+<launcher pkg="jschlatow/pkg/vnc_server/2024-05-16">
+	<route>
+		<service name="Capture">
+			<parent label="global"/>
+		</service>
+		<service name="Event">
+			<parent label="vnc"/>
+		</service>
+		<service name="File_system">
+			<child name="recall_fs"/>
+		</service>
+		<service name="Nic">
+			<child name="nic_router"/>
+		</service>
+	</route>
+</launcher>
