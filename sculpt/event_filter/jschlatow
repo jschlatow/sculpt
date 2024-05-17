@@ -7,7 +7,6 @@
 				<key name="KEY_SYSRQ"    to="KEY_PRINT"/>
 				<key name="KEY_RIGHTMETA" to="KEY_SCREEN"/>
 				<ignore-key name="KEY_POWER"/>
-				<ignore-key name="KEY_UNKNOWN"/>
 				<!-- <include rom="keyboard/user.remap"/> -->
 				<include rom="numlock.remap"/>
 				<merge>
