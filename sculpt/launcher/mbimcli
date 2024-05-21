@@ -1,4 +1,4 @@
-<launcher pkg="mbimcli">
+<launcher pkg="jschlatow/pkg/mbimcli">
 	<route>
 		<service name="Terminal">
 			<child name="usb_modem_drv"/>

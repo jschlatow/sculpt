@@ -61,7 +61,7 @@
 		</config>
 	</start>
 
-	<start name="mobile_network" priority="-2" pkg="mobile_network">
+	<start name="mobile_network" priority="-2" pkg="jschlatow/pkg/mobile_network">
 		<route>
 			<service name="Usb">                  <child name="usb"/>        </service>
 			<service name="RM">                   <parent/>                  </service>

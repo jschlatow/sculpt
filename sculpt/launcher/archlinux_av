@@ -1,4 +1,4 @@
-<launcher ram="6200M" pkg="vbox6-block-capture">
+<launcher ram="6200M" pkg="jschlatow/pkg/vbox6-block-capture">
 	<route>
 		<service name="Block" label_suffix=" -> 1">
 			<child name="nvme-1.part" label="1"/>

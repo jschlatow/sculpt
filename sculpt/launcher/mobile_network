@@ -1,4 +1,4 @@
-<launcher pkg="mobile_network">
+<launcher pkg="jschlatow/pkg/mobile_network">
 	<route>
 		<service name="Usb">
 			<child name="usb"/>
