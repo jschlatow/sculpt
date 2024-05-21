@@ -6,6 +6,9 @@ gpu_drv: intel
 # supplemental depot content added to the system image
 import: pkg/sculpt_drivers-pc
 
+# custom platform driver (IRQ remapping)
+build: drivers/platform/pc drivers/acpi app/pci_decode kernel/nova
+
 # selection of accepted depot-package providers
 depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
 depot: ssumpf skalk
