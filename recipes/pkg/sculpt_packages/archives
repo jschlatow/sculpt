@@ -1,13 +1,7 @@
-_/pkg/vbox6-block-capture
-_/pkg/user_keys
 _/pkg/fs_report
 _/pkg/fs_rom
-_/pkg/mbimcli
-_/pkg/usb_modem_drv
-_/pkg/mobile_network
 _/pkg/sdl_vnc
 _/pkg/trace_recorder
 _/pkg/wireguard
 _/pkg/top
 _/pkg/sntp_client
-_/pkg/system_rtc-pc
