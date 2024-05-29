@@ -1,4 +1,4 @@
-<launcher pkg="mesa_gears" priority="-3">
+<launcher pkg="jschlatow/pkg/mesa_gears" priority="-3">
 	<route>
 		<service name="Gui">
 			<child name="wm"/>

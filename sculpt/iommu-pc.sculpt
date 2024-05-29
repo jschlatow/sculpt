@@ -4,13 +4,16 @@ system:  pc
 gpu_drv: intel
 
 # supplemental depot content added to the system image
-import: pkg/sculpt_drivers-pc pkg/pc_wifi src/pc_nic_drv
+import: pkg/sculpt_drivers-pc
+
+# custom platform driver (IRQ remapping)
+build: drivers/platform/pc drivers/acpi app/pci_decode kernel/nova
 
 # selection of launcher-menu entries
 launcher: vm_fs shared_fs report_dump system_clock-dummy
 launcher: usb_webcam audio mixer black_hole system_clock recall_fs
 launcher: mesa_gpu-intel mesa_gpu-cpu mesa_gears mesa_gears-cpu glmark2
-launcher: acpi_support
+launcher: acpi_support report_fs_rom
 
 deploy: iommu
 ram_fs: depot

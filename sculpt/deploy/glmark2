@@ -8,11 +8,7 @@
 		<service name="Timer"> <parent/> </service>
 	</common_routes>
 
-	<start name="mesa_gpu-intel" pkg="mesa_gpu-intel">
-		<route>
-			<service name="RM"> <parent/> </service>
-		</route>
-	</start>
+	<start name="mesa_gpu-intel"/>
 
 	<start name="wm" pkg="themed_wm">
 		<route>
@@ -24,18 +20,6 @@
 		</route>
 	</start>
 
-	<start name="glmark2" pkg="glmark2">
-		<route>
-			<service name="Gui">
-				<child name="wm"/>
-			</service>
-			<service name="Gpu">
-				<child name="intel_gpu"/>
-			</service>
-			<service name="ROM" label="mesa_gpu_drv.lib.so">
-				<child name="mesa_gpu-intel"/>
-			</service>
-		</route>
-	</start>
+	<start name="glmark2"/>
 
 </config>

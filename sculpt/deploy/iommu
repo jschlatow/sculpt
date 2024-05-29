@@ -18,13 +18,7 @@
 		<config> <default-policy path_prefix="/recall" writeable="yes"/> </config>
 	</start>
 
-	<start name="report_fs_rom" pkg="fs_rom" priority="-3">
-		<route>
-			<service name="File_system">
-				<parent label="report"/>
-			</service>
-		</route>
-	</start>
+	<start name="report_fs_rom"/>
 
 	<start name="system_info" pkg="jschlatow/pkg/system_info/2024-04-22" priority="-3">
 		<route>

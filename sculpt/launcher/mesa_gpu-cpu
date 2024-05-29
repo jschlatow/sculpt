@@ -1,4 +1,4 @@
-<launcher pkg="mesa_gpu-cpu">
+<launcher pkg="jschlatow/pkg/mesa_gpu-cpu">
 	<route>
 		<service name="RM"> <parent/> </service>
 	</route>

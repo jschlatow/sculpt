@@ -1,4 +1,4 @@
-<launcher pkg="glmark2" priority="-2">
+<launcher pkg="jschlatow/pkg/glmark2" priority="-2">
 	<route>
 		<service name="Gui">
 			<child name="wm"/>

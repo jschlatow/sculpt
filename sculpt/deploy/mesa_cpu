@@ -8,11 +8,7 @@
 		<service name="Timer"> <parent/> </service>
 	</common_routes>
 
-	<start name="mesa_gpu-cpu" pkg="mesa_gpu-cpu">
-		<route>
-			<service name="RM"> <parent/> </service>
-		</route>
-	</start>
+	<start name="mesa_gpu-cpu"/>
 
 	<start name="wm" pkg="themed_wm">
 		<route>
@@ -24,15 +20,6 @@
 		</route>
 	</start>
 
-	<start name="mesa_gears" pkg="mesa_gears">
-		<route>
-			<service name="Gui">
-				<child name="wm"/>
-			</service>
-			<service name="ROM" label="mesa_gpu_drv.lib.so">
-				<child name="mesa_gpu-cpu"/>
-			</service>
-		</route>
-	</start>
+	<start name="mesa_gears-cpu"/>
 
 </config>

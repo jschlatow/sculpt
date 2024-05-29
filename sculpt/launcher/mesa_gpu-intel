@@ -1,4 +1,4 @@
-<launcher pkg="mesa_gpu-intel">
+<launcher pkg="jschlatow/pkg/mesa_gpu-intel">
 	<route>
 		<service name="RM"> <parent/> </service>
 	</route>
