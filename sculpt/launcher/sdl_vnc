@@ -1,4 +1,4 @@
-<launcher pkg="sdl_vnc">
+<launcher pkg="jschlatow/pkg/sdl_vnc">
 	<route>
 		<service name="Nic">
 			<child name="nic_router"/>
