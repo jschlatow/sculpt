@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/unix_shell/2024-10-09">
+<launcher pkg="jschlatow/pkg/unix_shell/2024-11-13">
 	<route>
 		<service name="Gui">                           <child name="wm"/>              </service>
 		<service name="Rtc">                           <child name="system_clock"/>    </service>

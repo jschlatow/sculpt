@@ -7,7 +7,7 @@
 	<content>
 		<rom label="ld.lib.so"/>
 		<rom label="init"/>
-		<rom label="rtc"/>
+		<rom label="pc_rtc"/>
 		<rom label="system_rtc"/>
 		<rom label="report_rom"/>
 	</content>
@@ -37,14 +37,22 @@
 			<resource name="RAM" quantum="1M"/>
 			<provides> <service name="Report"/> <service name="ROM"/> </provides>
 			<config verbose="no">
+<<<<<<< HEAD
 				<policy label="rtc -> set_rtc" report="set_rtc"/>
+=======
+				<policy label="pc_rtc -> set_rtc" report="set_rtc"/>
+>>>>>>> 549e261 (sculpt: 24.10 adaptations)
 			</config>
 			<route>
 				<any-service> <parent/> </any-service>
 			</route>
 		</start>
 
+<<<<<<< HEAD
 		<start name="rtc">
+=======
+		<start name="pc_rtc">
+>>>>>>> 549e261 (sculpt: 24.10 adaptations)
 			<resource name="RAM" quantum="1M"/>
 			<provides><service name="Rtc"/></provides>
 			<config allow_setting_rtc="true"/>
@@ -59,7 +67,11 @@
 			<provides><service name="Rtc"/></provides>
 			<config/>
 			<route>
+<<<<<<< HEAD
 				<service name="Rtc"> <child name="rtc"/> </service>
+=======
+				<service name="Rtc"> <child name="pc_rtc"/> </service>
+>>>>>>> 549e261 (sculpt: 24.10 adaptations)
 				<any-service> <parent/> </any-service>
 			</route>
 		</start>

@@ -1,4 +1,4 @@
-<launcher pkg="cproc/pkg/morph_browser-jemalloc/2024-10-08">
+<launcher pkg="cproc/pkg/morph_browser-jemalloc/2024-10-28">
 	<route>
 		<service name="Nic">     <child name="nic_router"/>   </service>
 		<service name="Rtc">     <child name="system_clock"/> </service>
