@@ -24,7 +24,7 @@
 		<device vendor_id="0x2cb7" product_id="0x0210"/> <!-- t490s modem -->
 	</policy>
 
-	<policy label_prefix="usb_modem_drv ->">
+	<policy label_prefix="usb_modem ->">
 		<device vendor_id="0x2cb7" product_id="0x0210"/> <!-- t490s modem -->
 	</policy>
 	

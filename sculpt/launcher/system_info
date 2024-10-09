@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/system_info/2024-04-22" priority="-3" ram="35M">
+<launcher pkg="jschlatow/pkg/system_info/2024-10-09" priority="-3" ram="35M">
 	<route>
 		<service name="Gui">
 			<parent label="backdrop"/>

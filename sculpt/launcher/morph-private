@@ -1,4 +1,4 @@
-<launcher pkg="cproc/pkg/morph_browser-jemalloc/2024-04-16">
+<launcher pkg="cproc/pkg/morph_browser-jemalloc/2024-10-08">
 	<route>
 		<service name="Nic">     <child name="nic_router"/>   </service>
 		<service name="Rtc">     <child name="system_clock"/> </service>
@@ -12,6 +12,6 @@
 		<service name="Report" label="clipboard">       <child name="wm"/> </service>
 		<service name="ROM"    label="clipboard">       <child name="wm"/> </service>
 		<service name="Gpu"> <child name="intel_gpu"/> </service>
-		<service name="ROM" label="mesa_gpu_drv.lib.so"> <child name="mesa_gpu-intel"/> </service>
+		<service name="ROM" label="mesa_gpu.lib.so"> <child name="mesa_gpu-intel"/> </service>
 	</route>
 </launcher>

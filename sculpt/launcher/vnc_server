@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/vnc_server/2024-05-16">
+<launcher pkg="jschlatow/pkg/vnc_server/2024-10-09">
 	<route>
 		<service name="Capture">
 			<parent label="global"/>

@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/screenshot/2024-04-22">
+<launcher pkg="jschlatow/pkg/screenshot/2024-10-09">
 	<route>
 		<service name="Gui">
 			<parent/>

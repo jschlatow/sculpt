@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/firefox-av@vbox6/2024-05-23">
+<launcher pkg="jschlatow/pkg/firefox-av@vbox6/2024-10-09">
 	<route>
 		<service name="File_system" label="vm">
 			<child name="ram_fs"/>
