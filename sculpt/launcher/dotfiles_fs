@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/dotfiles_fs/2024-04-22">
+<launcher pkg="jschlatow/pkg/dotfiles_fs/2024-10-09">
 	<route>
 		<service name="File_system" label="dotfiles"> <child name="recall_fs"/>         </service>
 		<service name="ROM"         label="vimrc">    <parent label="config -> vimrc"/> </service>

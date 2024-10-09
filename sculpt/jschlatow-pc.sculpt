@@ -7,7 +7,7 @@ gpu_drv: intel
 import: pkg/sculpt_drivers-pc
 
 # custom platform driver (IRQ remapping)
-build: drivers/platform/pc drivers/acpi app/pci_decode kernel/nova
+#build: drivers/platform/pc drivers/acpi app/pci_decode kernel/nova
 
 # selection of accepted depot-package providers
 depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
@@ -23,7 +23,7 @@ deploy:       jschlatow-t490s
 ram_fs:       import_depot
 
 # selection of launcher-menu entries
-launcher: shared_fs file_vault keyboard_fs usb_modem_drv black_hole
+launcher: shared_fs file_vault keyboard_fs usb_modem black_hole
 launcher: mbimcli mobile_network archlinux_vm_fs user_keys archlinux depot_fs
 launcher: archlinux_av audio usb_webcam mixer
 launcher: ubuntu_vm_fs ubuntu
@@ -31,7 +31,7 @@ launcher: top report_dump acpi_support lock
 launcher: falkon falkon-private morph morph-private
 launcher: screenshot dotfiles_fs unix_shell
 launcher: report_fs_rom system_info goa_testbed
-launcher: recall_fs system_clock download_debug_info
+launcher: recall_fs system_clock system_clock_rw download_debug_info
 
 # preconfigured example scenarios
 presets: empty nano3d window_manager mobile_browsing unix_shell jschlatow-t490s

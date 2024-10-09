@@ -3,7 +3,7 @@
 		<service name="Gui">
 			<child name="wm"/>
 		</service>
-		<service name="ROM" label="mesa_gpu_drv.lib.so">
+		<service name="ROM" label="mesa_gpu.lib.so">
 			<child name="mesa_gpu-cpu"/>
 		</service>
 	</route>

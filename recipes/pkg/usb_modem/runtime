@@ -1,4 +1,4 @@
-<runtime ram="16M" caps="300" binary="usb_net_drv">
+<runtime ram="16M" caps="300" binary="usb_net">
 
 	<requires> <uplink/> <usb/> <rm/> </requires>
 	<provides> <terminal/> </provides>
@@ -7,7 +7,7 @@
 
 	<content>
 		<rom label="ld.lib.so"/>
-		<rom label="usb_net_drv"/>
+		<rom label="usb_net"/>
 	</content>
 
 </runtime>

@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/usb_modem_drv">
+<launcher pkg="jschlatow/pkg/usb_modem">
 	<route>
 		<service name="Uplink">
 			<child name="black_hole"/>

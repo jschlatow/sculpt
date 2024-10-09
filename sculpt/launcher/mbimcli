@@ -1,7 +1,7 @@
 <launcher pkg="jschlatow/pkg/mbimcli">
 	<route>
 		<service name="Terminal">
-			<child name="usb_modem_drv"/>
+			<child name="usb_modem"/>
 		</service>
 		<service name="Report" label="nic_router.config">
 			<child name="config_fs_report" label="nic_router"/>

@@ -1,4 +1,4 @@
-<launcher pkg="cproc/pkg/falkon-jemalloc/2024-04-16">
+<launcher pkg="cproc/pkg/falkon-jemalloc/2024-10-08">
 	<route>
 		<service name="Nic">     <child name="nic_router"/>    </service>
 		<service name="Rtc">     <child name="system_clock"/>  </service>

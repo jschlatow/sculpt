@@ -60,7 +60,7 @@
 		<service name="Usb">
 			<child name="usb"/>
 		</service>
-		<service name="ROM" label="mesa_gpu_drv.lib.so">
+		<service name="ROM" label="mesa_gpu.lib.so">
 			<child name="mesa_gpu-intel"/>
 		</service>
 		<service name="Gpu">
