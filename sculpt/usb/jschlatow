@@ -14,9 +14,10 @@
 	</policy>
 
 	<policy label_prefix="usb_webcam ->">
+		<device vendor_id="0x5986" product_id="0x2d2"/>  <!-- x230 webcam -->
 		<device vendor_id="0x5986" product_id="0x366"/>  <!-- x250 webcam -->
 		<device vendor_id="0x5986" product_id="0x706"/>  <!-- x260 webcam -->
-		<device vendor_id="0x04f2" product_id="0xb67c"/> <!-- t480s webcam -->
+		<device vendor_id="0x04f2" product_id="0xb67c"/> <!-- t490s webcam -->
 		<device vendor_id="0x041e" product_id="0x4088"/> <!-- LiveCam! -->
 	</policy>
 
