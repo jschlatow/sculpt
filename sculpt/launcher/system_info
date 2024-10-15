@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/system_info/2024-10-09" priority="-3" ram="35M">
+<launcher pkg="jschlatow/pkg/system_info/2024-10-15" priority="-3" ram="35M">
 	<route>
 		<service name="Gui">
 			<parent label="backdrop"/>
@@ -15,6 +15,9 @@
 		<service name="ROM" label="runtime/nic_router/state">
 			<child name="report_fs_rom"/>
 		</service>
+		<service name="ROM" label="VERSION">
+			<child name="config_fs_rom"/>
+		</service>
 	</route>
 
 	<config default_timezone="CET-1CEST,M3.5.0,M10.5.0" background_color="#11558833">
@@ -23,6 +26,10 @@
 		<clock/>
 		<calendar/>
 		<battery rom="runtime/acpi_support/acpi_battery"/>
+		<track>
+			<label size="40">            Sculpt OS            </label>
+			<label size="48" rom="VERSION"/>
+		</track>
 		<tabular rom="runtime/nic_router/state" alt="no IP found">
 			<node type="domain" name="uplink">
 				<row label="Uplink" attribute="ipv4"/>

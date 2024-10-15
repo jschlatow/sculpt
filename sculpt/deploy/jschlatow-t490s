@@ -74,6 +74,7 @@
 	<start name="unix_shell"/>
 	<start name="acpi_support"/>
 	<start name="report_fs_rom"/>
+	<start name="config_fs_rom"/>
 	<start name="system_info"/>
 	<start name="sticks_blue_backdrop" priority="-3" pkg="sticks_blue_backdrop">
 		<route>
