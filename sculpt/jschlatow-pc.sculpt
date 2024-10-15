@@ -30,9 +30,9 @@ launcher: ubuntu_vm_fs ubuntu
 launcher: top report_dump acpi_support lock
 launcher: falkon falkon-private morph morph-private
 launcher: screenshot dotfiles_fs unix_shell
-launcher: report_fs_rom system_info goa_testbed
+launcher: report_fs_rom config_fs_rom system_info goa_testbed
 launcher: recall_fs system_clock system_clock_rw download_debug_info
 
 # preconfigured example scenarios
 presets: empty nano3d window_manager mobile_browsing unix_shell jschlatow-t490s
-presets: goa_testbed
+presets: goa_testbed goa_testbed_vnc
