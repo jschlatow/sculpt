@@ -10,6 +10,7 @@ _/src/less
 _/src/libpng
 _/src/libvncserver
 _/src/lighttpd
+_/src/ping
 _/src/tcp_terminal
 _/src/vfs_import
 _/src/vfs_lxip
