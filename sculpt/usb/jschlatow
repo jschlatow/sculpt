@@ -11,6 +11,12 @@
 
 	<policy label_prefix="archlinux ->">
 		<device vendor_id="0x781" product_id="0x5583"/>  <!-- SanDisk USB-Stick -->
+		<device vendor_id="0x90c" product_id="0x1000"/>  <!-- Samsung Flash Drive FIT-->
+	</policy>
+
+	<policy label_prefix="archlinux_av ->">
+		<device vendor_id="0x781" product_id="0x5583"/>  <!-- SanDisk USB-Stick -->
+		<device vendor_id="0x90c" product_id="0x1000"/>  <!-- Samsung Flash Drive FIT-->
 	</policy>
 
 	<policy label_prefix="usb_webcam ->">
