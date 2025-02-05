@@ -18,6 +18,9 @@
 		<service name="ROM" label="VERSION">
 			<child name="config_fs_rom"/>
 		</service>
+		<service name="ROM" label="platform_info">
+			<parent label="platform_info"/>
+		</service>
 	</route>
 
 	<config default_timezone="CET-1CEST,M3.5.0,M10.5.0" background_color="#11558833">
@@ -29,6 +32,11 @@
 		<track>
 			<label size="40">            Sculpt OS            </label>
 			<label size="48" rom="VERSION"/>
+			<tabular rom="platform_info" alt="no platform info">
+				<node type="kernel">
+					<row label="Kernel" attribute="name" highlight="yes"/>
+				</node>
+			</tabular>
 		</track>
 		<tabular rom="runtime/nic_router/state" alt="no IP found">
 			<node type="domain" name="uplink">
