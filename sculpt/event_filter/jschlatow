@@ -6,6 +6,8 @@
 				<key name="KEY_F12"      to="KEY_DASHBOARD"/>
 				<key name="KEY_SYSRQ"    to="KEY_PRINT"/>
 				<key name="KEY_RIGHTMETA" to="KEY_SCREEN"/>
+				<key name="BTN_TOOL_PEN" to="BTN_LEFT"/>
+				<key name="BTN_STYLUS"   to="BTN_RIGHT"/>
 				<ignore-key name="KEY_POWER"/>
 				<!-- <include rom="keyboard/user.remap"/> -->
 				<include rom="numlock.remap"/>
@@ -17,13 +19,17 @@
 							<horizontal button="BTN_MIDDLE" speed_percent="-10"/>
 						</button-scroll>
 					</accelerate>
-					<touch-click>
-						<input name="touch"/>
-					</touch-click>
+					<!-- <touch-click> -->
+						<transform>
+							<input name="touch"/>
+							<scale x="0.25" y="0.25"/>
+						</transform>
+					<!-- </touch-click> -->
 					<input name="usb"/>
-					<input name="touch"/>
+					<input name="touchpad"/>
 					<input name="sdl"/>
 					<input name="vnc"/>
+					<input name="touch_keyboard"/>
 				</merge>
 			</remap>
 			<mod1>
@@ -43,9 +49,11 @@
 			<include rom="keyboard/special"/>
 		</chargen>
 	</output>
-	<policy label="runtime -> ps2"     input="ps2"/>
-	<policy label="runtime -> usb_hid" input="usb"/>
+	<policy label="runtime -> ps2"      input="ps2"/>
+	<policy label="runtime -> usb_hid"  input="usb"/>
 	<policy label_prefix="runtime -> vnc_server"     input="vnc"/>
-	<policy label="drivers -> touch"   input="touch"/>
-	<policy label="drivers -> sdl"     input="sdl"/>
+	<policy label="runtime -> touchpad" input="touchpad"/>
+	<policy label="runtime -> touch"    input="touch"/>
+	<policy label="runtime -> global"   input="touch_keyboard"/>
+	<policy label="drivers -> sdl"      input="sdl"/>
 </config>

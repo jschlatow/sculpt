@@ -1,0 +1,8 @@
+<launcher pkg="jschlatow/pkg/pc_i2c_hid/2025-02-05" priority="-1">
+	<route>
+		<service name="Platform"> <parent label="touchscreen"/> </service>
+		<service name="Event">    <parent label="touch"/>       </service>
+	</route>
+	<config gpio_pin="306" bus_addr="93" hid_addr="1" info="StarLite"/>
+</launcher>
+

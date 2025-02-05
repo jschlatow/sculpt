@@ -1,36 +1,41 @@
 # configuration decisions
-drivers: pc
+drivers: starlite
 system:  pc
 gpu: intel
 
 # supplemental depot content added to the system image
 import: pkg/sculpt_drivers-pc
 
-build: lib/ld core kernel app/sculpt_manager
+#build: lib/ld core
+build: app/pci_decode driver/acpi
 
 
 # selection of accepted depot-package providers
 depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
 depot: ssumpf skalk
+depot: jschlatow_test
 
 ################
 # Customisation
 
 nitpicker:    jschlatow
-deploy:       system_info
+deploy:       starlite
 ram_fs:       depot
+event_filter: jschlatow
 
 # selection of launcher-menu entries
 launcher: shared_fs file_vault black_hole
 launcher: audio usb_webcam mixer
 launcher: top report_dump acpi_support
 launcher: falkon-private morph-private
-launcher: screenshot report_fs_rom system_info
+launcher: screenshot report_fs_rom system_info config_fs_rom
 launcher: recall_fs system_clock download_debug_info
-launcher: mesa_gears mesa_gears-cpu mesa_gpu-intel mesa_gpu-cpu glmark2
+launcher: touchscreen touch_keyboard
+launcher: unix_shell dotfiles_fs
+#launcher: mesa_gears mesa_gears-cpu mesa_gpu-intel mesa_gpu-cpu glmark2
 
 # preconfigured example scenarios
 presets: empty nano3d window_manager system_info
 presets: goa_testbed goa_testbed_vnc
-presets: mesa mesa_cpu glmark2
+#presets: mesa mesa_cpu glmark2
 presets: falkon_web_browser
