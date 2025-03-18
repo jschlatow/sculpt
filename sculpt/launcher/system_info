@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/system_info/2024-10-15" priority="-3" ram="35M">
+<launcher pkg="jschlatow/pkg/system_info/2025-03-03" priority="-3" ram="35M">
 	<route>
 		<service name="Gui">
 			<parent label="backdrop"/>
@@ -30,8 +30,8 @@
 		<calendar/>
 		<battery rom="runtime/acpi_support/acpi_battery"/>
 		<track>
-			<label size="40">            Sculpt OS            </label>
-			<label size="48" rom="VERSION"/>
+			<label size="32">Sculpt OS</label>
+			<label size="34" rom="VERSION"/>
 			<tabular rom="platform_info" alt="no platform info">
 				<node type="kernel">
 					<row label="Kernel" attribute="name" highlight="yes"/>
