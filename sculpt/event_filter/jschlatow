@@ -20,10 +20,14 @@
 						</button-scroll>
 					</accelerate>
 					<!-- <touch-click> -->
+					<touch-key>
 						<transform>
 							<input name="touch"/>
 							<scale x="0.25" y="0.25"/>
 						</transform>
+						<tap xpos="0"    ypos="1880" width="100" height="40" key="KEY_DASHBOARD"/>
+						<tap xpos="2780" ypos="1880" width="100" height="40" key="KEY_KEYBOARD"/>
+					</touch-key>
 					<!-- </touch-click> -->
 					<input name="usb"/>
 					<input name="touchpad"/>
