@@ -1,0 +1,29 @@
+# configuration decisions
+drivers: starlite
+system:  pc
+gpu:     intel
+
+# supplemental depot content added to the system image
+import: pkg/sculpt_drivers-pc
+
+build: app/pci_decode
+
+# selection of launcher-menu entries
+launcher: vm_fs shared_fs download_debug_info black_hole trace_logger
+launcher: audio mixer system_clock acpi_support recall_fs
+launcher: touchscreen
+
+# selection of accepted depot-package providers
+depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
+depot: ssumpf skalk atopia
+depot: jschlatow_test
+
+# preconfigured example scenarios
+presets: empty touchscreen
+deploy: touchscreen
+
+ram_fs: depot
+
+manager: use_ram_fs
+
+event_filter: jschlatow
