@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/screenshot/2024-10-29">
+<launcher pkg="jschlatow/pkg/screenshot/2025-04-11-a">
 	<route>
 		<service name="Gui">
 			<parent/>
@@ -6,7 +6,7 @@
 		<service name="Capture">
 			<parent label="global"/>
 		</service>
-		<service name="File_system" label="target">
+		<service name="File_system" label_prefix="target -> ">
 			<child name="recall_fs"/>
 		</service>
 		<service name="Rtc">
