@@ -19,16 +19,40 @@
 							<horizontal button="BTN_MIDDLE" speed_percent="-10"/>
 						</button-scroll>
 					</accelerate>
-					<!-- <touch-click> -->
-					<touch-key>
-						<transform>
-							<input name="touch"/>
-							<scale x="0.25" y="0.25"/>
-						</transform>
-						<tap xpos="0"    ypos="1880" width="100" height="40" key="KEY_DASHBOARD"/>
-						<tap xpos="2780" ypos="1880" width="100" height="40" key="KEY_KEYBOARD"/>
-					</touch-key>
-					<!-- </touch-click> -->
+					<!--
+					<button-scroll>
+						<touch-gesture> -->
+							<transform>
+								<input name="touch"/>
+								<scale x="0.25" y="0.25"/>
+							</transform>
+					<!--
+							<hold> <key name="BTN_RIGHT"/> </hold>
+							<hold fingers="2" delay_ms="200" width="500" height="500">
+								<key hold="yes" name="BTN_MIDDLE"/>
+							</hold>
+							<hold fingers="3" delay_ms="500" width="300" height="300">
+								<key hold="yes" name="KEY_SCREEN">
+									<key hold="yes" name="BTN_MIDDLE"/>
+								</key>
+							</hold>
+							<swipe direction="down" xpos="1000" ypos="0" width="880" height="100">
+								<key name="KEY_DASHBOARD"/>
+							</swipe>
+							<swipe direction="left" fingers="3" distance="500">
+								<key name="KEY_SCREEN"> <key name="KEY_2"/> </key>
+							</swipe>
+							<swipe direction="right" fingers="3" distance="500">
+								<key name="KEY_SCREEN"> <key name="KEY_1"/> </key>
+							</swipe>
+							<swipe direction="up" fingers="3">
+								<key name="KEY_SCREEN"> <key name="KEY_ENTER"/> </key>
+							</swipe>
+						</touch-gesture>
+						<vertical   button="BTN_MIDDLE" speed_percent="-5"/>
+						<horizontal button="BTN_MIDDLE" speed_percent="-5"/>
+					</button-scroll>
+					-->
 					<input name="usb"/>
 					<input name="touchpad"/>
 					<input name="sdl"/>
