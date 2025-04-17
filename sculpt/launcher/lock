@@ -1,4 +1,4 @@
-<launcher pkg="alex-ab/pkg/gui_lock/2024-04-10">
+<launcher pkg="alex-ab/pkg/gui_lock/2025-04-13">
 	<route>
 		<service name="Gui">
 			<parent label="lock_screen" />

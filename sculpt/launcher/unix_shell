@@ -1,14 +1,14 @@
-<launcher pkg="jschlatow/pkg/unix_shell/2025-02-21-a">
+<launcher pkg="jschlatow/pkg/unix_shell/2025-04-17">
 	<route>
 		<service name="Nic">                           <child name="nic_router"/>      </service>
 		<service name="Gui">                           <child name="wm"/>              </service>
 		<service name="Rtc">                           <child name="system_clock"/>    </service>
-		<service name="File_system" label="home">      <child name="default_fs_rw"/>   </service>
-		<service name="File_system" label="report">    <parent label="report"/>        </service>
-		<service name="File_system" label="shared">    <child name="shared_fs"/>       </service>
-		<service name="File_system" label="config">    <parent label="config"/>        </service>
-		<service name="File_system" label="fonts">     <child name="fonts_fs"/>        </service>
-		<service name="File_system" label="dotfiles">  <child name="dotfiles_fs"/>     </service>
+		<service name="File_system" label_prefix="home ->">      <child name="default_fs_rw"/>   </service>
+		<service name="File_system" label_prefix="report ->">    <parent identity="report"/>     </service>
+		<service name="File_system" label_prefix="shared ->">    <child name="shared_fs"/>       </service>
+		<service name="File_system" label_prefix="config ->">    <parent identity="config"/>     </service>
+		<service name="File_system" label_prefix="fonts ->">     <child name="fonts_fs"/>        </service>
+		<service name="File_system" label_prefix="dotfiles ->">  <child name="dotfiles_fs"/>     </service>
 		<service name="ROM"         label="clipboard"> <child name="wm"/>              </service>
 		<service name="Report"      label="clipboard"> <child name="wm"/>              </service>
 	</route>

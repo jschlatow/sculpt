@@ -1,12 +1,12 @@
 <launcher pkg="file_vault">
 	<route>
-		<service name="File_system" label="data">
+		<service name="File_system" label_prefix="data ->">
 			<child name="recall_fs"/>
 		</service>
-		<service name="File_system" label="trust_anchor">
+		<service name="File_system" label_prefix="trust_anchor ->">
 			<child name="recall_fs"/>
 		</service>
-		<service name="File_system" label="fonts">
+		<service name="File_system" label_prefix="fonts ->">
 			<child name="fonts_fs"/>
 		</service>
 		<service name="RM">

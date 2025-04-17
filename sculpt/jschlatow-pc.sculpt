@@ -7,7 +7,7 @@ gpu: intel
 import: pkg/sculpt_drivers-pc
 
 # custom platform driver (IRQ remapping)
-#build: drivers/platform/pc drivers/acpi app/pci_decode kernel/nova
+build: app/pci_decode
 
 # selection of accepted depot-package providers
 depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
@@ -19,20 +19,22 @@ depot: ssumpf skalk
 usb:          jschlatow
 event_filter: jschlatow
 nitpicker:    jschlatow
-deploy:       jschlatow-t490s
+deploy:       system_info
 ram_fs:       import_depot
 
 # selection of launcher-menu entries
-launcher: shared_fs file_vault keyboard_fs usb_modem black_hole
-launcher: mbimcli mobile_network archlinux_vm_fs user_keys archlinux depot_fs
+launcher: shared_fs file_vault usb_modem black_hole
+launcher: mbimcli mobile_network user_keys archlinux
 launcher: archlinux_av audio usb_webcam mixer
-launcher: ubuntu_vm_fs ubuntu
-launcher: top report_dump acpi_support lock
+launcher: ubuntu
+launcher: top report_dump acpi_support lock msr_gui
 launcher: falkon falkon-private morph morph-private
 launcher: screenshot dotfiles_fs unix_shell
 launcher: report_fs_rom config_fs_rom system_info goa_testbed
 launcher: recall_fs system_clock system_clock_rw download_debug_info
+launcher: touchscreen
 
 # preconfigured example scenarios
-presets: empty nano3d window_manager mobile_browsing unix_shell jschlatow-t490s
+presets: empty nano3d window_manager
+presets: mobile_browsing unix_shell jschlatow-t490s
 presets: goa_testbed goa_testbed_vnc

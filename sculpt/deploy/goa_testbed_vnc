@@ -19,19 +19,19 @@
 		</route>
 	</start>
 
-	<start name="fs_rom" priority="-2" pkg="jschlatow/pkg/fs_rom/2024-10-07">
+	<start name="fs_rom" priority="-2" pkg="jschlatow/pkg/fs_rom">
 		<route>
-			<service name="File_system"> <parent label="report"/> </service>
+			<service name="File_system"> <parent identity="report"/> </service>
 		</route>
 	</start>
 
-	<start name="config_fs_rom" priority="-2" pkg="jschlatow/pkg/fs_rom/2024-10-07">
+	<start name="config_fs_rom" priority="-2" pkg="jschlatow/pkg/fs_rom">
 		<route>
-			<service name="File_system"> <parent label="config"/> </service>
+			<service name="File_system"> <parent identity="config"/> </service>
 		</route>
 	</start>
 
-	<start name="system_info" pkg="jschlatow/pkg/system_info/2024-10-15" priority="-2">
+	<start name="system_info" pkg="jschlatow/pkg/system_info/2025-04-11" priority="-2">
 		<route>
 			<service name="Gui"> <parent label="backdrop"/> </service>
 			<service name="Rtc"> <child name="system_clock"/> </service>
@@ -58,7 +58,7 @@
 		</config>
 	</start>
 
-	<start name="goa_testbed_vnc" pkg="jschlatow/pkg/goa_testbed_vnc/2024-10-11" priority="-2">
+	<start name="goa_testbed_vnc" pkg="jschlatow/pkg/goa_testbed_vnc/2025-04-17" priority="-2">
 		<route>
 			<service name="TRACE">       <parent/> </service>
 			<service name="VM">          <parent/> </service>
@@ -67,7 +67,7 @@
 			<service name="Play">        <child name="black_hole"/>      </service>
 			<service name="Record">      <child name="black_hole"/>      </service>
 			<service name="Usb">         <child name="black_hole"/>      </service>
-			<service name="File_system"> <child name="recall_fs"/>       </service>
+			<service name="File_system"> <child identity="goa_testbed" name="recall_fs"/>       </service>
 			<service name="Nic" label_prefix="telnet">       <child name="nic_router" label="telnet"/> </service>
 			<service name="Nic" label_prefix="http">         <child name="nic_router" label="http"/>   </service>
 			<service name="Nic" label_prefix="vnc">          <child name="nic_router" label="vnc"/>    </service>

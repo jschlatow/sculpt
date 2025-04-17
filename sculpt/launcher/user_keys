@@ -1,7 +1,7 @@
 <launcher pkg="jschlatow/pkg/user_keys">
 	<route>
-		<service name="File_system" label="keyboard">
-			<child name="keyboard_fs"/>
+		<service name="File_system" label_prefix="keyboard ->">
+			<parent identity="config" resource="/keyboard"/>
 		</service>
 		<service name="Gui">
 			<parent/>

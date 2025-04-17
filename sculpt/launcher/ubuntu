@@ -1,10 +1,10 @@
 <launcher ram="5200M" pkg="vbox6">
 	<route>
-		<service name="File_system" label="vm">
-			<child name="ubuntu_vm_fs"/>
+		<service name="File_system" label_prefix="vm ->">
+			<child name="nvme-1.6.fs" resource="/vm/ubuntu/Ubuntu"/>
 		</service>
-		<service name="File_system" label="shared">
-			<child name="shared_fs"/>
+		<service name="File_system" label_prefix="shared ->">
+			<child name="nvme-1.6.fs" resource="/shared" />
 		</service>
 		<service name="VM">
 			<parent/>

@@ -1,4 +1,4 @@
-<launcher pkg="jschlatow/pkg/goa_testbed/2024-10-11">
+<launcher pkg="jschlatow/pkg/goa_testbed/2025-04-11">
 	<route>
 		<service name="TRACE">       <parent/> </service>
 		<service name="VM">          <parent/> </service>
@@ -10,7 +10,7 @@
 		<service name="Usb">         <child name="black_hole"/>   </service>
 		<service name="Event">       <child name="black_hole"/>   </service>
 		<service name="Capture">     <parent label="global"/>     </service>
-		<service name="File_system"> <child name="recall_fs"/>    </service>
+		<service name="File_system"> <child identity="goa_testbed" name="recall_fs"/>    </service>
 		<service name="Nic" label_prefix="telnet"> <child name="nic_router" label="telnet"/> </service>
 		<service name="Nic" label_prefix="httpd">  <child name="nic_router" label="http"/>   </service>
 		<service name="Nic" label_prefix="gdb">    <child name="nic_router" label="gdb"/>    </service>

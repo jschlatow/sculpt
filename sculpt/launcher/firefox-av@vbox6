@@ -1,9 +1,9 @@
-<launcher pkg="jschlatow/pkg/firefox-av@vbox6/2024-10-09">
+<launcher pkg="jschlatow/pkg/firefox-av@vbox6/2025-04-17">
 	<route>
-		<service name="File_system" label="vm">
+		<service name="File_system" label_prefix="vm ->">
 			<child name="ram_fs"/>
 		</service>
-		<service name="File_system" label="shared">
+		<service name="File_system" label_prefix="shared ->">
 			<child name="ram_fs"/>
 		</service>
 		<service name="VM">

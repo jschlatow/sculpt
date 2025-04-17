@@ -1,7 +1,7 @@
 <launcher pkg="jschlatow/pkg/fs_rom" priority="-3">
 	<route>
 		<service name="File_system">
-			<parent label="config"/>
+			<parent identity="config"/>
 		</service>
 	</route>
 </launcher>
