@@ -19,7 +19,12 @@
 		<device vendor_id="0x90c" product_id="0x1000"/>  <!-- Samsung Flash Drive FIT-->
 	</policy>
 
+	<policy label_prefix="camera ->">
+		<device vendor_id="0x1bcf" product_id="0x284d"/> <!-- StarLite rear camera -->
+	</policy>
+
 	<policy label_prefix="usb_webcam ->">
+		<device vendor_id="0x0bda" product_id="0x5830"/> <!-- StarLite front camera -->
 		<device vendor_id="0x5986" product_id="0x2d2"/>  <!-- x230 webcam -->
 		<device vendor_id="0x5986" product_id="0x366"/>  <!-- x250 webcam -->
 		<device vendor_id="0x5986" product_id="0x706"/>  <!-- x260 webcam -->
