@@ -6,9 +6,6 @@ gpu: intel
 # supplemental depot content added to the system image
 import: pkg/sculpt_drivers-pc
 
-# custom platform driver (IRQ remapping)
-build: app/pci_decode
-
 # selection of accepted depot-package providers
 depot: genodelabs cnuke alex-ab mstein nfeske cproc chelmuth jschlatow
 depot: ssumpf skalk
