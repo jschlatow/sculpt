@@ -3,6 +3,9 @@
 		<service name="Gui">
 			<parent label="lock_screen" />
 		</service>
+		<service name="ROM" label="platform_info">
+			<parent label="platform_info" />
+		</service>
 	</route>
 	<config password="1234" transparent="no"/>
 </launcher>

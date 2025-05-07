@@ -1,4 +1,4 @@
-<launcher pkg="usb_webcam">
+<launcher ram="64M" pkg="usb_webcam">
 	<route>
 		<service name="Usb">
 			<child name="usb"/>

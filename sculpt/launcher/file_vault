@@ -1,10 +1,10 @@
 <launcher pkg="file_vault">
 	<route>
 		<service name="File_system" label_prefix="data ->">
-			<child name="recall_fs"/>
+			<child name="nvme-1.6.fs" prepend_resource="/file_vault/data"/>
 		</service>
 		<service name="File_system" label_prefix="trust_anchor ->">
-			<child name="recall_fs"/>
+			<child name="nvme-1.6.fs" prepend_resource="/file_vault/trust_anchor"/>
 		</service>
 		<service name="File_system" label_prefix="fonts ->">
 			<child name="fonts_fs"/>
