@@ -115,7 +115,7 @@
 			</policy>
 			<policy label_prefix="runtime -> touchscreen" info="yes">
 				<device name="00:15.2" type="pci"/>
-				<device name="INT34C5" type="acpi"/>
+				<device name="STARLITE_TOUCH" type="acpi"/>
 			</policy>
 			<policy label_suffix="-> wifi" msix="false" info="yes"> <pci class="WIFI"/> </policy>
 			<policy label_suffix="-> nic" info="yes">   <pci class="ETHERNET"/> </policy>

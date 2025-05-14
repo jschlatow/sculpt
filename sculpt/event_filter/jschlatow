@@ -19,40 +19,43 @@
 							<horizontal button="BTN_MIDDLE" speed_percent="-10"/>
 						</button-scroll>
 					</accelerate>
-					<!--
 					<button-scroll>
-						<touch-gesture> -->
+						<touch-gesture>
 							<transform>
 								<input name="touch"/>
-								<scale x="0.25" y="0.25"/>
+								<scale x="0.1875" y="0.1875"/>
 							</transform>
-					<!--
 							<hold> <key name="BTN_RIGHT"/> </hold>
-							<hold fingers="2" delay_ms="200" width="500" height="500">
+							<hold fingers="2" delay_ms="200" width="300" height="300">
 								<key hold="yes" name="BTN_MIDDLE"/>
 							</hold>
-							<hold fingers="3" delay_ms="500" width="300" height="300">
+							<hold fingers="3" delay_ms="500" width="700" height="300">
 								<key hold="yes" name="KEY_SCREEN">
-									<key hold="yes" name="BTN_MIDDLE"/>
+									<key hold="yes" name="BTN_LEFT"/>
 								</key>
 							</hold>
-							<swipe direction="down" xpos="1000" ypos="0" width="880" height="100">
+							<swipe direction="down" xpos="580" ypos="0" width="1000" height="400" distance="50">
 								<key name="KEY_DASHBOARD"/>
 							</swipe>
-							<swipe direction="left" fingers="3" distance="500">
+							<swipe direction="left" xpos="1800" ypos="220" width="360" height="1000" distance="50">
+								<key name="KEY_LEFTALT"> <key name="KEY_LEFT"/> </key>
+							</swipe>
+							<swipe direction="right" xpos="0" ypos="220" width="360" height="1000" distance="50">
+								<key name="KEY_LEFTALT"> <key name="KEY_RIGHT"/> </key>
+							</swipe>
+							<swipe direction="left" fingers="3" distance="50">
 								<key name="KEY_SCREEN"> <key name="KEY_2"/> </key>
 							</swipe>
-							<swipe direction="right" fingers="3" distance="500">
+							<swipe direction="right" fingers="3" distance="50">
 								<key name="KEY_SCREEN"> <key name="KEY_1"/> </key>
 							</swipe>
-							<swipe direction="up" fingers="3">
+							<swipe direction="up" fingers="3" distance="50">
 								<key name="KEY_SCREEN"> <key name="KEY_ENTER"/> </key>
 							</swipe>
 						</touch-gesture>
 						<vertical   button="BTN_MIDDLE" speed_percent="-5"/>
 						<horizontal button="BTN_MIDDLE" speed_percent="-5"/>
 					</button-scroll>
-					-->
 					<input name="usb"/>
 					<input name="touchpad"/>
 					<input name="sdl"/>
